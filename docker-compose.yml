@@ -66,7 +66,7 @@ services:
         dockerfile: Dockerfile
     container_name: library_mern_frontend
     volumes:
-        - ./app/node_modules
+        - /app/node_modules
         - ./frontend:/app
     # ports:
     #    - 3000:3000
@@ -89,9 +89,9 @@ services:
         - library-mern-api
 
 networks:
-   library-mern-api:
-      driver: bridge
+  library-mern-api:
+    driver: bridge
 
 volumes:
-   mongodb-data:
-      driver: local
+  mongodb-data:
+    driver: local
